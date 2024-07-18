@@ -139,7 +139,7 @@ init_images = kubeflow + kubernetes_dashboard + new_gpu + new_prometheus + istio
 
 
 # 通过私有仓库，将公有镜像下发到内网每台机器上，例如内网docker.oa.com的仓库
-harbor_repo = 'xx.xx.xx.xx:xx/cube-studio/'
+harbor_repo = 'harbor.bigdata.com/cube-studio/'
 pull_file = open('pull_images.sh', mode='w', newline='\n')
 push_harbor_file = open('push_harbor.sh', mode='w', newline='\n')
 pull_harbor_file = open('pull_harbor.sh', mode='w', newline='\n')
@@ -179,7 +179,7 @@ load_image_file.write('\nwait\n')
 pull_harbor_file.write('\nwait\n')
 push_harbor_file.write('\nwait\n')
 
-print('若服务器可以链网，直接执行sh pull_images.sh')
+print('若服务器可以联网，直接执行sh pull_images.sh')
 print('若服务器无法联网，替换本代码中的内网harbor仓库名，先在可联网机器上执行push_harbor.sh，再在内网机器上执行pull_harbor.sh')
 
 
