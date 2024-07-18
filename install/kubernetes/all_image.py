@@ -119,14 +119,14 @@ user_image = [
 ]
 
 # 任务模板的镜像
-all_job_templates = json.load(open('../../myapp/init/init-job-template.json',mode='r'))
+all_job_templates = json.load(open('../../myapp/init/init-job-template.json', mode='r', encoding='utf-8'))
 job_template_images = [template['image_name'] for template in list(all_job_templates.values())]
 
 ## 示例需要的镜像
 example_images=[]
 for file in os.listdir('../../myapp/init/'):
     file = os.path.join('../../myapp/init',file)
-    content = open(file).read()
+    content = open(file, encoding='utf-8').read()
     matchs = re.findall('"(ccr.ccs.tencentyun.com/cube-studio.*)"', content)
     for match in matchs:
         if match not in example_images:
@@ -140,12 +140,12 @@ init_images = kubeflow + kubernetes_dashboard + new_gpu + new_prometheus + istio
 
 # 通过私有仓库，将公有镜像下发到内网每台机器上，例如内网docker.oa.com的仓库
 harbor_repo = 'xx.xx.xx.xx:xx/cube-studio/'
-pull_file = open('pull_images.sh',mode='w')
-push_harbor_file = open('push_harbor.sh',mode='w')
-pull_harbor_file = open('pull_harbor.sh', mode='w')
+pull_file = open('pull_images.sh', mode='w', newline='\n')
+push_harbor_file = open('push_harbor.sh', mode='w', newline='\n')
+pull_harbor_file = open('pull_harbor.sh', mode='w', newline='\n')
 
-pull_save_file = open('image_save.sh',mode='w')
-load_image_file = open('image_load.sh',mode='w')
+pull_save_file = open('image_save.sh',mode='w', newline='\n')
+load_image_file = open('image_load.sh',mode='w', newline='\n')
 
 # push_harbor_file.write(f'准备登录: {harbor_repo}\n')
 push_harbor_file.write('docker login '+harbor_repo[:harbor_repo.index('/')]+"\n")
