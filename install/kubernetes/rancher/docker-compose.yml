@@ -1,0 +1,21 @@
+version: '2.3'
+services:
+  rancher:
+    restart: always
+    privileged: true
+    image: rancher/rancher:v2.8.5
+    container_name: rancher
+    volumes:
+      - ./data:/var/lib/rancher
+      - /etc/resolved.conf:/etc/resolved.conf
+    environment:
+      - CATTLE_BOOTSTRAP_PASSWORD=Xmz@323!
+    ports:
+      - 88:80
+      - 8443:443
+    networks:
+      - rancher
+networks:
+  rancher:
+    external: false
+
