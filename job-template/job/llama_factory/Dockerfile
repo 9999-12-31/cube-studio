@@ -1,4 +1,5 @@
-FROM ccr.ccs.tencentyun.com/cube-studio/aihub:base-cuda11.8-python3.11
+#FROM ccr.ccs.tencentyun.com/cube-studio/aihub:base-cuda11.8-python3.11
+FROM harbor.bigdata.com/cube-studio/ubuntu-gpu:cuda11.8.0-cudnn8-python3.9
 
 #设置工作目录
 WORKDIR /root/llama_factory

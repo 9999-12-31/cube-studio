@@ -2,5 +2,5 @@
 
 set -ex
 
-docker build --network=host -t ccr.ccs.tencentyun.com/cube-studio/llama-factory:chatglm4 -f Dockerfile .
-docker push ccr.ccs.tencentyun.com/cube-studio/llama-factory:chatglm4
+docker build --network=host -t harbor.bigdata.com/cube-studio/llama-factory:20240723 -f Dockerfile .
+docker push harbor.bigdata.com/cube-studio/llama-factory:20240723
