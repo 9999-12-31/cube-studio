@@ -28,6 +28,7 @@ const RouterConfig = (config: RouteObject[]) => {
   return element;
 }
 
+document.title = '医疗模型训练平台'
 const getRouterMap = (routerList: IRouterConfigPlusItem[]): Record<string, IRouterConfigPlusItem> => {
   const res: Record<string, IRouterConfigPlusItem> = {}
   const queue = [...routerList]
@@ -83,10 +84,10 @@ const AppWrapper = (props: IProps) => {
       setCurrentRouteComponent(() => () => RouterConfig(tarRoute as RouteObject[]))
     }).catch(err => { })
 
-    getAppHeaderConfig().then(res => {
-      const config = res.data
-      setHeaderConfig(config)
-    }).catch(err => { })
+    // getAppHeaderConfig().then(res => {
+    //   const config = res.data
+    //   setHeaderConfig(config)
+    // }).catch(err => { })
   }, [])
 
   useEffect(() => {
@@ -338,10 +339,11 @@ const AppWrapper = (props: IProps) => {
         isShowNav === 'false' ? null : <div className="navbar">
           <div className="d-f ac pl48 h100">
             <div className="d-f ac">
-              <div className="cp pr16" style={{ width: 'auto' }} onClick={() => {
+              <div className="cp pr16 d-f ac ml4" style={{ width: '240px' }} onClick={() => {
                 navigate('/', { replace: true })
               }}>
-                <img style={{ height: 42 }} src={globalConfig.appLogo.default} alt="img" />
+                <img style={{ height: 25 }} src={'data:image/png;base64,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'} alt="img" />
+                <div className='ml10' style={{color: '#fff',fontWeight:'bold',fontSize:'18px',letterSpacing:'1px'}}>医疗模型训练平台</div>
               </div>
 
               {
