@@ -88,11 +88,27 @@ pre {
   width           : 100vw;
   position        : relative;
   height          : 56px;
-  background-color: #fff;
+  //background-color: #fff;
   // box-shadow: 0 1px 4px #00152914;
   box-shadow      : 0 1px 4px #0015292b;
   z-index         : 20;
   overflow-x      : auto;
+  background: rgb(10, 42, 76);
+  color: rgb(255, 255, 255);
+  .ant-menu {
+    background: rgb(10, 42, 76);
+    color: rgb(214 211 209);
+    .ant-menu-item-active{
+      font-weight: normal!important;
+      color: rgb(255, 255, 255) !important;
+    }
+    .ant-menu-item-selected{
+      color: #fff!important;
+      .mainapp-topmenu-name{
+        font-weight: bold!important;
+      }
+    }
+  }
 }
 
 .main-content-container {
@@ -107,7 +123,11 @@ pre {
   position    : relative;
   z-index     : 10;
   border-right: 1px solid #e5e6eb;
-
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
+    color: rgb(28, 100, 242)!important;
+    font-weight: bold!important;
+    background: rgb(235, 245, 255)!important;
+  }
   .ant-menu {
     // background-color: #1f222c;
     // padding-left: 32px;
@@ -143,7 +163,12 @@ pre {
     padding-left : 64px !important;
     padding-right: 48px !important;
   }
-
+  .ant-menu-submenu .ant-menu>.ant-menu-item:hover {
+    background: rgb(243, 244, 246);
+  }
+  .ant-menu-sub.ant-menu-inline{
+    background: #fff;
+  }
   .menu-collapsed {
     position: absolute;
     top     : 50%;
@@ -255,8 +280,10 @@ pre {
 
     &:hover {
       // background: #0084F6;
-      background: @primary-1;
-      color     : @custom-theme;
+      //background: @primary-1;
+      //color     : @custom-theme;
+      font-weight: normal;
+      color: rgb(255, 255, 255);
     }
 
     .mainapp-topmenu-icon {
@@ -279,8 +306,10 @@ pre {
   }
 
   .mainapp-item-active {
-    color     : #1e1653;
-    border-top: 2px solid #1e1653;
+    //color     : #1e1653;
+    //border-top: 2px solid #1e1653;
+    font-weight: bold;
+    color: #fff;
   }
 }
 
