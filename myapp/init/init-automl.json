@@ -15,7 +15,7 @@
     "job_json": {
 
     },
-    "job_worker_image": "ccr.ccs.tencentyun.com/cube-studio/nni:20230601",
+    "job_worker_image": "harbor.bigdata.com/cube-studio/nni:20230601",
     "working_dir": "/mnt/admin/pipeline/example/nni/",
     "job_worker_command": "python demo.py",
     "resource_memory": "1G",

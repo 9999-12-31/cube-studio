@@ -2,13 +2,13 @@ images = open("rancher-images-mini.txt").readlines()
 
 images = list(set([x.strip() for x in images if x.strip()]))
 # 通过私有仓库，将公有镜像下发到内网每台机器上，例如内网ccr.ccs.tencentyun.com的仓库，共约26G
-harbor_repo = 'xx.xx.xx.xx:xx/xx/'
-pull_file = open('pull_rancher_images.sh',mode='w')
-push_harbor_file = open('push_rancher_harbor.sh',mode='w')
-pull_harbor_file = open('pull_rancher_harbor.sh', mode='w')
+harbor_repo = 'harbor.bigdata.com/rancher/'
+pull_file = open('pull_rancher_images.sh', mode='w', newline='\n')
+push_harbor_file = open('push_rancher_harbor.sh', mode='w', newline='\n')
+pull_harbor_file = open('pull_rancher_harbor.sh', mode='w', newline='\n')
 
-pull_save_file = open('rancher_image_save.sh',mode='w')
-load_image_file = open('rancher_image_load.sh',mode='w')
+pull_save_file = open('rancher_image_save.sh', mode='w', newline='\n')
+load_image_file = open('rancher_image_load.sh', mode='w', newline='\n')
 
 push_harbor_file.write('docker login '+harbor_repo[:harbor_repo.index('/')]+"\n")
 pull_harbor_file.write('docker login '+harbor_repo[:harbor_repo.index('/')]+"\n")
@@ -40,8 +40,8 @@ load_image_file.write('\nwait\n')
 pull_harbor_file.write('\nwait\n')
 push_harbor_file.write('\nwait\n')
 
-print('若服务器可以链网，直接执行sh pull_rancher_images.sh')
-print('若服务器无法联网，替换本代码中的内网harbor仓库名，先在可联网机器上执行push_harbor.sh，再在内网机器上执行pull_harbor.sh')
+print('若服务器可以联网，直接执行sh pull_rancher_images.sh')
+print('若服务器无法联网，替换本代码中的内网harbor仓库名，先在可联网机器上执行push_rancher_harbor.sh，再在内网机器上执行pull_rancher_harbor.sh')
 
 
 
