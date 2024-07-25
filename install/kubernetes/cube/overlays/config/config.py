@@ -862,7 +862,7 @@ NERDCTL_IMAGES='harbor.bigdata.com/cube-studio/nerdctl:1.7.2'
 
 WAIT_POD_IMAGES='harbor.bigdata.com/cube-studio/wait-pod:v1'
 # notebook，pipeline镜像拉取策略
-IMAGE_PULL_POLICY='Always'    # IfNotPresent   Always
+IMAGE_PULL_POLICY='IfNotPresent'    # IfNotPresent   Always
 
 # 任务资源使用情况地址
 GRAFANA_TASK_PATH='/grafana/d/pod-info/pod-info?var-pod='
