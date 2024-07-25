@@ -64,7 +64,18 @@ class Notebook_ModelView_Base():
     order_columns = ['id']
     search_columns = ['created_by', 'name']
     add_columns = ['project', 'name', 'describe', 'images', 'working_dir', 'volume_mount', 'resource_memory','resource_cpu', 'resource_gpu']
-    list_columns = ['project', 'ide_type_html', 'name_url', 'status', 'describe','reset', 'resource', 'renew', 'save']
+    #list_columns = ['project', 'ide_type_html', 'name_url', 'status', 'describe','reset', 'resource', 'renew', 'save']
+    list_columns = ['project', 'ide_type_html', 'name_url', 'status', 'describe','reset', 'resource', 'renew']
+    # cols_width = {
+    #     "project": {"type": "ellip2", "width": 150},
+    #     "ide_type_html": {"type": "ellip2", "width": 200},
+    #     "name_url": {"type": "ellip2", "width": 250},
+    #     "describe": {"type": "ellip2", "width": 300},
+    #     "resource": {"type": "ellip2", "width": 300},
+    #     "status": {"type": "ellip2", "width": 100},
+    #     "renew": {"type": "ellip2", "width": 200},
+    #     "save": {"type": "ellip2", "width": 100}
+    # }
     cols_width = {
         "project": {"type": "ellip2", "width": 150},
         "ide_type_html": {"type": "ellip2", "width": 200},
@@ -72,8 +83,7 @@ class Notebook_ModelView_Base():
         "describe": {"type": "ellip2", "width": 300},
         "resource": {"type": "ellip2", "width": 300},
         "status": {"type": "ellip2", "width": 100},
-        "renew": {"type": "ellip2", "width": 200},
-        "save": {"type": "ellip2", "width": 100}
+        "renew": {"type": "ellip2", "width": 200}
     }
     add_form_query_rel_fields = {
         "project": [["name", Project_Join_Filter, 'org']]
