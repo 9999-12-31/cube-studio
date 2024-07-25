@@ -101,7 +101,8 @@ function get_username() {
     if(!id)
         id='';
     content = username;
-    src = id+" @Cube-Studio";
+    // src = id + " @Cube Studio";
+    const src = id;
     $(document).ready(function(){
         drawWaterMark({content:content,src:src});
     });

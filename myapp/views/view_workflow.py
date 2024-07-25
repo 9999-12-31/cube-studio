@@ -879,7 +879,7 @@ class Workflow_ModelView_Base(Crd_ModelView_Base):
                     {
                         "groupName": "",
                         "groupContent": {
-                            "value": Markup("提示：仅企业版支持任务结果、模型指标、数据集可视化预览"),
+                            "value": Markup(""),
                             # options的值
                             "type": 'html'
                         }

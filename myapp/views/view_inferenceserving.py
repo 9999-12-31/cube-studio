@@ -146,7 +146,7 @@ llm-server: 不同镜像提供不同的推理架构，默认为vllm提供gpu推�
                                     validators=[DataRequired()]),
         "host": StringField(_('域名'), default=InferenceService.host.default.arg,description= _('访问域名，')+host_rule,widget=BS3TextFieldWidget()),
         "transformer":StringField(_('前后置处理'), default=InferenceService.transformer.default.arg,description= _('前后置处理逻辑，用于原生开源框架的请求预处理和响应预处理，目前仅支持kfserving下框架'),widget=BS3TextFieldWidget()),
-        'resource_gpu':StringField(_('gpu'), default='0', description= _('gpu的资源使用限制(单位卡)，示例:1，2，训练任务每个容器独占整卡。申请具体的卡型号，可以类似 1(V100)，<span style="color:red;">虚拟化占用和共享模式占用仅企业版支持</span>'),
+        'resource_gpu':StringField(_('gpu'), default='0', description= _('gpu的资源使用限制(单位卡)，示例:1，2，训练任务每个容器独占整卡。申请具体的卡型号，可以类似 1(V100)。'),
                                                         widget=BS3TextFieldWidget(),validators=[DataRequired()]),
 
         'sidecar': MySelectMultipleField(
@@ -416,13 +416,13 @@ vmargs=-Dlog4j.configurationFile=file:///config/log4j2.xml
 
     def torch_log(self):
         config_str = '''
-<RollingFile name="access_log" fileName="${env:LOG_LOCATION:-logs}/access_log.log" filePattern="${env:LOG_LOCATION:-logs}/access_log.%d{dd-MMM}.log.gz"> 
-  <PatternLayout pattern="%d{ISO8601} - %m%n"/>  
-  <Policies> 
-    <SizeBasedTriggeringPolicy size="100 MB"/>  
-    <TimeBasedTriggeringPolicy/> 
-  </Policies>  
-  <DefaultRolloverStrategy max="5"/> 
+<RollingFile name="access_log" fileName="${env:LOG_LOCATION:-logs}/access_log.log" filePattern="${env:LOG_LOCATION:-logs}/access_log.%d{dd-MMM}.log.gz">
+  <PatternLayout pattern="%d{ISO8601} - %m%n"/>
+  <Policies>
+    <SizeBasedTriggeringPolicy size="100 MB"/>
+    <TimeBasedTriggeringPolicy/>
+  </Policies>
+  <DefaultRolloverStrategy max="5"/>
 </RollingFile>
 
         '''
@@ -439,10 +439,10 @@ vmargs=-Dlog4j.configurationFile=file:///config/log4j2.xml
         parameters = ''
         if model_type == 'tf':
             parameters = '''
-optimization { execution_accelerators { 
-    gpu_execution_accelerator : [ { 
+optimization { execution_accelerators {
+    gpu_execution_accelerator : [ {
         name : "tensorrt"
-        parameters { key: "precision_mode" value: "FP16" }}] 
+        parameters { key: "precision_mode" value: "FP16" }}]
 }}
         '''
         if model_type == 'onnx':
@@ -1258,11 +1258,11 @@ output %s
                 "trigger": 'axis',
                  "position": [10, 10]
               },
-        
+
               "legend": {
                 "data": {{ legend }}
               },
-               
+
               "grid": {
                 "left": '3%',
                 "right": '4%',
@@ -1274,7 +1274,7 @@ output %s
                 "min": new Date('{{today}}'),
                 "max": new Date('{{tomorrow}}'),
                 "boundaryGap": false,
-                "timezone" : 'Asia/Shanghai', 
+                "timezone" : 'Asia/Shanghai',
               },
               "yAxis": {
                 "type": "value",
@@ -1292,7 +1292,7 @@ output %s
               },
               "series": {{services_metric}}
             }
-    
+
             '''
             # print(services_metrics)
             rtemplate = Environment(loader=BaseLoader, undefined=DebugUndefined).from_string(option)

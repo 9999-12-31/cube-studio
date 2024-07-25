@@ -1,6 +1,6 @@
 /**
  * 获取第一个表格的可视化高度
- * @param {number} extraHeight 额外的高度(表格底部的内容高度 Number类型,默认为74) 
+ * @param {number} extraHeight 额外的高度(表格底部的内容高度 Number类型,默认为74)
  * @param {reactRef} ref Table所在的组件的ref
  */
 export function getTableScroll({ extraHeight, ref }: any = {}) {
@@ -185,7 +185,8 @@ export function drawWater() {
     if (!id)
         id = '';
     const content = username;
-    const src = id + " @Cube Studio";
+    // const src = id + " @Cube Studio";
+    const src = id;
 
     window.onload = function () {
         drawWaterMark({ content: content, src: src });
@@ -202,7 +203,8 @@ export function drawWaterNow() {
     if (!id)
         id = '';
     const content = username;
-    const src = id + " @Cube Studio";
+    // const src = id + " @Cube Studio";
+    const src = id;
 
     drawWaterMark({ content: content, src: src });
 }
