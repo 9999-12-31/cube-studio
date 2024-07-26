@@ -1,10 +1,10 @@
 Flask==2.3.3
-flask-appbuilder==4.3.7     # Flaskåº”ç”¨æ„å»ºåº“
-Flask-Migrate==4.0.5        # æ•°æ®åº“ç‰ˆæœ¬å˜æ›´
-flask-compress==1.14       #  Flaskå“åº”å‹ç¼©åº“
-flask-caching==2.0.2        # Flaskç¼“å­˜åº“
-flask-talisman==1.1.0       #  Flaskå®‰å…¨å¤´åº“
-Flask-OpenID==1.3.0         # via flask-appbuilder  Flask OpenIDåº“
+flask-appbuilder==4.3.7     # FlaskÓ¦ÓÃ¹¹½¨¿â
+Flask-Migrate==4.0.5        # Êı¾İ¿â°æ±¾±ä¸ü
+flask-compress==1.14       #  FlaskÏìÓ¦Ñ¹Ëõ¿â
+flask-caching==2.0.2        # Flask»º´æ¿â
+flask-talisman==1.1.0       #  Flask°²È«Í·¿â
+Flask-OpenID==1.3.0         # via flask-appbuilder  Flask OpenID¿â
 Flask-SQLAlchemy==2.5.1     # via flask-appbuilder
 Flask-Login==0.6.2          # via flask-appbuilder
 Flask-Limiter==3.5.0        # via flask-appbuilder
@@ -17,37 +17,37 @@ SQLAlchemy-Utils==0.41.1    # via flask-appbuilder
 werkzeug==2.3.7
 wtforms==2.3.3
 wtforms-json==0.3.5
-Flask-Cors==3.0.10          # Flaskè·¨åŸŸèµ„æºå…±äº«ï¼ˆCORSï¼‰åº“
-# Flask-Babel==4.0.0          # ç¿»è¯‘ä¸“ç”¨
+Flask-Cors==3.0.10          # Flask¿çÓò×ÊÔ´¹²Ïí£¨CORS£©¿â
+# Flask-Babel==4.0.0          # ·­Òë×¨ÓÃ
 
-celery==5.2.2               # å¼‚æ­¥ä»»åŠ¡é˜Ÿåˆ—åº“,5.2.2
-gunicorn==21.2.0            # Python WSGI HTTPæœåŠ¡å™¨
-humanize==4.8.0             # ä½¿æ•°å­—æ›´å…·å¯è¯»æ€§çš„åº“
-emoji==2.8.0                # è¡¨æƒ…å­—ç¬¦å¤„ç†
-psycopg2-binary==2.9.8      # postgresqlæ•°æ®åº“
-wechatpy==1.8.18            # æ˜¯ä¸€ä¸ªç”¨äºå¤„ç†å¾®ä¿¡å…¬ä¼—å·APIçš„åº“
-pycryptodome==3.19.0        # wechatéœ€è¦çš„åŸºç¡€åº“
-xlrd==2.0.1                 # æ˜¯ä¸€ä¸ªç”¨äºè¯»å–Excelæ–‡ä»¶çš„åº“
-pydub==0.25.1               # æ˜¯ä¸€ä¸ªç”¨äºå¤„ç†éŸ³é¢‘æ–‡ä»¶çš„åº“
-openpyxl==3.1.2             # æ˜¯ä¸€ä¸ªç”¨äºå¤„ç†Excelæ–‡ä»¶çš„åº“
-elasticsearch==7.12.1       # esæ•°æ®åº“
-jieba==0.42.1               # ä¸­æ–‡åˆ†è¯
-sseclient-py==1.8.0         # openai æµå¼å®¢æˆ·ç«¯
-simplejson==3.19.1          # æ˜¯ä¸€ä¸ªå¤„ç†JSONæ•°æ®çš„åº“
-PySnooper==1.2.0            # å‡½æ•°è°ƒç”¨è·Ÿè¸ª
-kubernetes==21.7.0          #  Kubernetes Pythonå®¢æˆ·ç«¯åº“
-statsd==4.0.1               # æ˜¯ä¸€ä¸ªç”¨äºå‘é€ç»Ÿè®¡æ•°æ®åˆ°StatsDæœåŠ¡å™¨çš„åº“ã€‚
-redis==5.0.1                # redisæ•°æ®åº“è¿æ¥
-pymysql==1.1.0              # è¿æ¥mysqlæ•°æ®åº“
-minio==7.1.17               # MinIO Pythonå®¢æˆ·ç«¯åº“
-markdown==3.4.4             # Markdownæ–‡æœ¬è½¬æ¢åº“
-croniter==1.4.1             # cronè¡¨è¾¾å¼è§£æåº“
-contextlib2==21.6.0         # ç”¨äºæä¾›ä¸contextlibæ¨¡å—ç›¸ä¼¼çš„åŠŸèƒ½
-parsedatetime==2.6          # æ—¥æœŸæ—¶é—´è§£æåº“
-pylint==3.0.0               # Pythonæºä»£ç åˆ†æå™¨ï¼Œç”¨äºæŸ¥æ‰¾ç¼–ç¨‹é”™è¯¯ã€éµå¾ªä»£ç é£æ ¼æŒ‡å—
-bleach==6.0.0               # HTMLæ¸…ç†å’Œé“¾æ¥åŒ–åº“
-pandas==2.1.1               # æ•°æ®å¤„ç†
-beautifulsoup4==4.12.2      # ç”¨äºè§£æHTMLå’ŒXMLæ–‡æ¡£
+celery==5.2.2               # Òì²½ÈÎÎñ¶ÓÁĞ¿â,5.2.2
+gunicorn==21.2.0            # Python WSGI HTTP·şÎñÆ÷
+humanize==4.8.0             # Ê¹Êı×Ö¸ü¾ß¿É¶ÁĞÔµÄ¿â
+emoji==2.8.0                # ±íÇé×Ö·û´¦Àí
+psycopg2-binary==2.9.8      # postgresqlÊı¾İ¿â
+wechatpy==1.8.18            # ÊÇÒ»¸öÓÃÓÚ´¦ÀíÎ¢ĞÅ¹«ÖÚºÅAPIµÄ¿â
+pycryptodome==3.19.0        # wechatĞèÒªµÄ»ù´¡¿â
+xlrd==2.0.1                 # ÊÇÒ»¸öÓÃÓÚ¶ÁÈ¡ExcelÎÄ¼şµÄ¿â
+pydub==0.25.1               # ÊÇÒ»¸öÓÃÓÚ´¦ÀíÒôÆµÎÄ¼şµÄ¿â
+openpyxl==3.1.2             # ÊÇÒ»¸öÓÃÓÚ´¦ÀíExcelÎÄ¼şµÄ¿â
+elasticsearch==7.12.1       # esÊı¾İ¿â
+jieba==0.42.1               # ÖĞÎÄ·Ö´Ê
+sseclient-py==1.8.0         # openai Á÷Ê½¿Í»§¶Ë
+simplejson==3.19.1          # ÊÇÒ»¸ö´¦ÀíJSONÊı¾İµÄ¿â
+PySnooper==1.2.0            # º¯Êıµ÷ÓÃ¸ú×Ù
+kubernetes==21.7.0          #  Kubernetes Python¿Í»§¶Ë¿â
+statsd==4.0.1               # ÊÇÒ»¸öÓÃÓÚ·¢ËÍÍ³¼ÆÊı¾İµ½StatsD·şÎñÆ÷µÄ¿â¡£
+redis==5.0.1                # redisÊı¾İ¿âÁ¬½Ó
+pymysql==1.1.0              # Á¬½ÓmysqlÊı¾İ¿â
+minio==7.1.17               # MinIO Python¿Í»§¶Ë¿â
+markdown==3.4.4             # MarkdownÎÄ±¾×ª»»¿â
+croniter==1.4.1             # cron±í´ïÊ½½âÎö¿â
+contextlib2==21.6.0         # ÓÃÓÚÌá¹©ÓëcontextlibÄ£¿éÏàËÆµÄ¹¦ÄÜ
+parsedatetime==2.6          # ÈÕÆÚÊ±¼ä½âÎö¿â
+pylint==3.0.0               # PythonÔ´´úÂë·ÖÎöÆ÷£¬ÓÃÓÚ²éÕÒ±à³Ì´íÎó¡¢×ñÑ­´úÂë·ç¸ñÖ¸ÄÏ
+bleach==6.0.0               # HTMLÇåÀíºÍÁ´½Ó»¯¿â
+pandas==2.1.1               # Êı¾İ´¦Àí
+beautifulsoup4==4.12.2      # ÓÃÓÚ½âÎöHTMLºÍXMLÎÄµµ
 cffi==1.16.0
-clickhouse-driver==0.2.7    # sqllabå¯¹æ¥clickhouse
+clickhouse-driver==0.2.7    # sqllab¶Ô½Óclickhouse
 
