@@ -234,7 +234,7 @@ const Home: React.FC = () => {
         }}
       >
         <Section name={t('平台主要功能')} data={pipelineList} first={true}></Section>
-        <Section name={t('新手视频')} data={videoList}></Section>
+        {/*<Section name={t('新手视频')} data={videoList}></Section>*/}
         <Stack
           styles={{
             root: {
