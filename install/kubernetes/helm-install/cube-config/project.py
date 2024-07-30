@@ -117,7 +117,7 @@ class MyCustomRemoteUserView(AuthRemoteUserView):
 # 账号密码登录方式的登录界面
 
 class Myauthdbview(AuthDBView):
-    login_template = "appbuilder/general/security/login_db.html"
+    login_template = "login_db.html"
 
     @expose("/login/api/", methods=["GET", "POST"])
     # @pysnooper.snoop(watch_explode=('form',))
