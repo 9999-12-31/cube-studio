@@ -158,20 +158,20 @@ const Home: React.FC = () => {
 
   // 初始化
   useEffect(() => {
-    setVideoList([
-      {
-        name: t('新人制作一个pipeline'),
-        img: '/static/assets/images/ad/video-cover1-thumb.png',
-        url: 'https://cube-studio.oss-cn-hangzhou.aliyuncs.com/cube-studio.mp4',
-        type: 'video',
-      },
-      {
-        name: t('自定义任务模板'),
-        img: '/static/assets/images/ad/video-cover2-thumb.png',
-        url: 'https://cube-studio.oss-cn-hangzhou.aliyuncs.com/job-template.mp4',
-        type: 'video',
-      }
-    ]);
+    // setVideoList([
+    //   {
+    //     name: t('新人制作一个pipeline'),
+    //     img: '/static/assets/images/ad/video-cover1-thumb.png',
+    //     url: 'https://cube-studio.oss-cn-hangzhou.aliyuncs.com/cube-studio.mp4',
+    //     type: 'video',
+    //   },
+    //   {
+    //     name: t('自定义任务模板'),
+    //     img: '/static/assets/images/ad/video-cover2-thumb.png',
+    //     url: 'https://cube-studio.oss-cn-hangzhou.aliyuncs.com/job-template.mp4',
+    //     type: 'video',
+    //   }
+    // ]);
     api.pipeline_modelview_demo().then((res: any) => {
       if (res.status === 0) {
         const { result } = res;
@@ -234,7 +234,7 @@ const Home: React.FC = () => {
         }}
       >
         <Section name={t('平台主要功能')} data={pipelineList} first={true}></Section>
-        {/*<Section name={t('新手视频')} data={videoList}></Section>*/}
+        {/* <Section name={t('新手视频')} data={videoList}></Section>*/}
         <Stack
           styles={{
             root: {
