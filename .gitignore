@@ -3,6 +3,11 @@
 __pycache__
 install/docker/file
 myapp/static/file
+/myapp/static/aihub
+/myapp/static/assets
+/myapp/static/dataset
+/myapp/static/global
+/myapp/static/mnt
 myapp/test
 #/myapp/static/appbuilder/vison/*
 /myapp/static/appbuilder/mnt
