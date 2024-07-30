@@ -11,7 +11,7 @@ class LogModelView(LogMixin, MyappModelView):
     datamodel = MyappSQLAInterface(Log)
     list_columns = ['user','method','path','duration_ms','dttm']
 
-    spec_label_columns = {
+    label_columns = {
         "action": _("函数"),
         "path": _("网址"),
         "dttm": _("时间"),
